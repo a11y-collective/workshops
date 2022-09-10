@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Keyboard navigation, the basics</title>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon"
+              type="image/png"
+              href="https://a11y-collective.github.io/workshop/favicon.ico">
+        <link rel="stylesheet" href="../stylesheet.css" type="text/css" media="all">
+        <meta name="robots" content="noindex,nofollow">
+    </head>
+
+    <body>
+
+        <main>
+
+            <h1>Keyboard navigation, the basics</h1>
+
+            <ul>
+                <li>Tab: Move forward from link to link or to controls</li>
+                <li>Shift + Tab: Move backward from link to link or to controls</li>
+                <li>Enter: Activate links, buttons, or other interactive elements</li>
+                <li>Arrow: Navigate radio buttons and select boxes and scroll up and down a page</li>
+                <li>Spacebar: Activate radio buttons and check boxes and buttons</li>
+            </ul>
+
+            <p><strong>First</strong>: <a href="https://dev.to/nickytonline/enabling-keyboard-navigation-on-your-mac-1hjb">Activate Keyboard Navigation in Mac Browsers</a></p>
+            <p><strong>Good overview</strong>: <a href="https://webaim.org/techniques/keyboard/">Keyboard Navigation Overview on WebAIM</a></p>
+
+            <h2>Focusable HTML elements</h2>
+            <ul>
+                <li>a</li>
+                <li>button</li>
+                <li>input</li>
+                <li>textarea</li>
+                <li>select</li>
+                <li>radio button</li>
+                <li>checkbox</li>
+            </ul>
+            <p>Try it yourself on: <a href="keyboard-exercise.html">Exercise keyboard navigation</a></p>
+
+            <h2>Visible Focus</h2>
+            <p>Browsers add a visible focus to an element but some CSS resets add:<code>outline: 0;</code>. This makes it very hard to navigate a site with a keyboard only.</p>
+            <p>Add <code>:focus</code> where you add <code>:hover</code> in your CSS.</p>
+
+            <h2>Tab index</h2>
+            <h3>Add focus to an element:</h3>
+            <ul>
+                <li><strong>tabindex: 0</strong> gives focus to items that wouldn’t normally get focus and includes them into normal tab order</li>
+                <li><strong>tabindex:-1</strong> gives focus to items that wouldn’t normally get focus and/or removes items from the normal tab order</li>
+                <li><strong>tabindex: any positive integer</strong> gives focus and overrules normal tab order</li>
+            </ul>
+            <p>Avoid hijacking the tabindex: it makes it laborious for keyboard users to access the menu.</p>
+
+        </main>
+
+        <footer>
+            <p><button onclick="window.history.back()">Go back</button></p>
+            <p>These pages are used for workshops only and not part of the courses.</p>
+            <p>Created by <a href="https://a11y-collective.com/">The A11Y Collective</a>.</p>
+        </footer>
+
+    </body>
+
+</html>
