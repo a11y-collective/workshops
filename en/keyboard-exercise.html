@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Keyboard navigation, exercises</title>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo%7CIBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link rel="icon"
               type="image/png"
               href="https://a11y-collective.github.io/workshop/favicon.ico">
@@ -17,7 +17,64 @@
         <main>
             <h1>Keyboard navigation, exercises</h1>
 
-            <p>Check with keyboard only:</p>
+            <ul>
+                <li>Tab: Move forward from link to link or to controls</li>
+                <li>Shift + Tab: Move backward from link to link or to controls</li>
+                <li>Enter: Activate links, buttons, or other interactive elements</li>
+                <li>Arrow: Navigate radio and select buttons</li>
+                <li>Spacebar: Select radio buttons and check boxes</li>
+            </ul>
+
+            <h2>Links</h2>
+            <ul>
+                <li><a href="#">one</a></li>
+                <li><a href="#">two</a></li>
+                <li><a href="#">three</a></li>
+                <li><a href="#">four</a></li>
+                <li><a href="#">five</a></li>
+            </ul>
+
+            <h2>Select</h2>
+            <p>Tip: use the arrow keys</p>
+
+            <fieldset>
+                <legend>How many cookies</legend>
+                <label for="amount">Amount</label>
+                <select name="amount" id="amount">
+                    <option value="one">One</option>
+                    <option value="two">Two</option>
+                    <option value="three">Three</option>
+                    <option value="four">Four</option>
+                </select>
+            </fieldset>
+
+            <h2>Radio buttons</h2>
+            <p>Tip: use the arrow keys</p>
+            <fieldset>
+                <legend>Size</legend>
+                <input checked="checked" name="size" id="small" type="radio" value="small" />
+                <label for="small">small</label>
+                <input name="size" type="radio" value="medium" id="medium"/>
+                <label for="medium">medium</label>
+                <input name="size" type="radio"  id="large" value="large" />
+                <label for="large">large</label>
+                <input name="size" type="radio" value="extra-large" id="extra-large"/>
+                <label for="extra-large">extra large</label>
+            </fieldset>
+
+            <h2>Check boxes</h2>
+            <p>Tip: use the tab and space bar</p>
+            <fieldset>
+                <input id="cb-s" checked="checked" name="size" type="checkbox" value="small" /><label for="cb-s">Small</label>
+                <input id="cb-m" name="size" type="checkbox" value="medium" /><label for="cb-m">Medium</label>
+                <input id="cb-l" name="size" type="checkbox" value="large" /><label for="cb-l">Large</label>
+                <input id="cb-e" name="size" type="checkbox" value="extra large" /><label for="cb-e">Extra large</label>
+            </fieldset>
+
+            <h2>Buttons</h2>
+            <button type="button">Click me!</button>
+
+            <p>DIY! Check with keyboard only:</p>
             <ul>
                 <li><a href="https://netherlands.wordcamp.org/" lang="nl" hreflang="nl">WordCamp Nederland</a></li>
                 <li><a href="https://www.belastingdienst.nl/" lang="nl" hreflang="nl">Belastingdienst</a></li>

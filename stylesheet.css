@@ -3,7 +3,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     background-color: #efefef4d;
     color: #333;
-	line-height: 1.5em;
+    line-height: 1.5em;
 }
 
 @media screen and (min-width: 50em) {
@@ -16,6 +16,44 @@ body.wide {
     max-width: 80%;
 }
 
+h1, h2, h3 {
+    line-height: 1.1em;
+    font-family: Arvo,sans-serif;
+    font-weight: 400;
+}
+
+.header-with-logo header {
+    text-align: center;
+    line-height: 2;
+}
+
+.header-with-logo footer {
+    line-height: normal;
+}
+.header-with-logo h1  {
+    color: #0600ed;
+    line-height: 2;
+}
+
+.header-with-logo h1 span {
+    color: #333;
+}
+
+.header-logo {
+    width: 150px;
+    height: auto;
+}
+
+.header-with-logo ul {
+    margin-left: 3em;
+    line-height: 3;
+    list-style: none;
+}
+
+.header-with-logo ul li {
+    border-bottom: 1px solid #757575;
+}
+
 p.narrow {
     max-width: 5em;
 }
@@ -24,29 +62,45 @@ p.right-width {
     max-width: 40em;
 }
 
-.twitter {
-	width: 4em;
-	fill: #1da1f2
+.color-box {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
-.block {
-	border: #ccc 1px solid;
-	background-color: #fff;
-	padding: 1em;
-	margin-bottom: 1em;
+.color-box li {
+    width: 30%;
+    text-align: center;
+    padding: 2em 1em;
+    margin: 1em;
+    border: solid 1px #333;
+}
+
+.one {
+    color: #999999;
+    background-color: #ffffff;
+}
+
+.two {
+    color: #ff0000;
+    background-color: #008000;
+}
+
+.three {
+    color: #FF6200;
+    background-color: #ffffff;
+}
+
+.four {
+    color: #828282;
+    background-color: #000000;
 }
 
 .form-block {
-	padding: 1em 0;
-	margin-bottom: 1em;
-}
-h1 {
-	color: #0600ed;
+    padding: 1em 0;
+    margin-bottom: 1em;
 }
 
-h1, h2, h3 {
-    line-height: 1.1em;
-    font-weight: normal;
-}
+
 
 h2, h3 {
     margin-top: 2em;
@@ -62,28 +116,26 @@ img.right {
 }
 
 img.left {
-	width: 40%;
-	display: block;
+    width: 40%;
+    display: block;
 }
-.no-focus * {
-	outline: 0;
-}
+
 table {
-	border-collapse: collapse;
-	margin-bottom: 4em;
+    border-collapse: collapse;
+    margin-bottom: 4em;
 }
 td, th {
-	padding: 0.5rem;
-	border: 1px solid #333;
+    padding: 0.5rem;
+    border: 1px solid #333;
 }
 
 th {
-	background-color: #ddd;
+    background-color: #ddd;
 }
 
 table caption, th {
-	text-align: left;
-	font-weight: bold;
+    text-align: left;
+    font-weight: bold;
 }
 
 blockquote {
@@ -93,16 +145,13 @@ blockquote {
     padding: 1em;
 }
 
-input {
-	border-color: #949494;
-}
 ::placeholder,
 ::-webkit-input-placeholder {
-	color: #757575;
-	opacity: 1;
+    color: #757575;
+    opacity: 1;
 }
 
-footer nav {
+footer {
     border-top: 2px solid black;
     margin-top: 4em;
 }
@@ -111,11 +160,16 @@ button, .button {
     margin: 1em 0;
     padding: 1em;
     font-size: inherit;
-	cursor: pointer;
-	background-color: #eee;
-	border: solid 1px #333;
-	text-align: center;
-	display: inline-block;
+    cursor: pointer;
+    background-color: #eee;
+    border: solid 1px #333;
+    text-align: center;
+    display: inline-block;
+}
+
+button:hover {
+    color: #eee;
+    background-color: #333;
 }
 
 .alt-text-img {
@@ -130,16 +184,316 @@ button, .button {
     font-family: 'Viga', sans-serif;
 }
 
-pre, code{
-  font-size: 1.2em;
-  color: #4C7413;
+pre {
+    font-size: 1.2em;
+    color: #4C7413;
 }
 
-strong {
-	font-weight: 700;
+/*
+	Multi tabs
+*/
+.images li {
+    list-style: none;
+    width: 30em;
+    border: green 2px solid;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.multi-tabs li {
+    list-style: none;
+    width: 20em;
+    border: green 2px solid;
+    padding: 1em;
+    margin-bottom: 1em;
 }
 
-footer {
-	margin-top: 2em;
-	border-top: solid 2px #ccc;
+.images a:hover,
+.images a:focus,
+.multi-tabs a:hover,
+.multi-tabs a:focus {
+    text-decoration: none;
+    outline: green 1px solid;
+}
+
+
+.multi-tabs li.card a {
+    text-decoration: none;
+}
+
+.multi-tabs li.card a:hover,
+.multi-tabs li.card a:focus {
+    text-decoration: underline;
+}
+
+.multi-tabs li.card p a {
+    text-decoration: underline;
+}
+
+.multi-tabs li.card p a:hover,
+.multi-tabs li.card p a:focus {
+    text-decoration: none;
+}
+
+.multi-tabs img {
+    width: 20em;
+}
+
+
+.multi-tabs .to-be-covered {
+    position: relative;
+}
+
+.multi-tabs .to-be-covered:focus-within,
+.multi-tabs .to-be-covered:hover,
+.multi-tabs li.card:focus-within,
+.multi-tabs li.card:hover {
+    outline: thick double green;
+}
+
+.multi-tabs li.skip-tab a:hover img {
+    outline: thick double green;
+}
+
+.multi-tabs .to-be-covered a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.multi-tabs .pseudo a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* extra link */
+.multi-tabs p a {
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+}
+
+.multi-tabs p a:hover,
+.multi-tabs p a:focus {
+    text-decoration: none;
+}
+
+/* Tooltips. */
+
+/* Tooltip on aria-label. */
+.has-tooltip {
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+.has-tooltip:hover,
+.has-tooltip:focus {
+    border: 1px solid #333;
+}
+.heart {
+    width: 2em;
+    height: 2em;
+    fill: #c00;
+}
+
+button[aria-label] {
+    position:relative
+}
+
+button[aria-label]::after {
+    content:attr(aria-label);
+    display:none;
+    position:absolute;
+    top:70%;
+    left:10px;
+    padding:0.5em;
+    white-space:nowrap;
+    overflow:visible;
+    color:#fff;
+    background-color: #1e97bc;
+}
+
+button[aria-label]:hover::after,
+button[aria-label]:focus::after {
+    display:block
+}
+
+/* Tooltip on aria-describedby. */
+.question-mark {
+    width: 2em;
+    height: 2em;
+}
+[role="tooltip"] {
+    display: none;
+}
+
+button:hover + [role="tooltip"],
+button:focus + [role="tooltip"] {
+    display: block;
+}
+
+.long-tooltip-container {
+    position:relative
+}
+
+[role="tooltip"] {
+    position:absolute;
+    top:0;
+    left:2em;
+    min-width: 20em;
+    max-width: 30em;
+    padding: 1em;
+    overflow:visible;
+    border: solid 1px #333;
+    background-color: #fefefe;
+}
+
+[role="tooltip"] img {
+    margin: 1em 0;
+}
+
+/* Tooltip on emoij. */
+
+span.tooltip {
+    position: relative;
+}
+
+
+span.tooltip:hover::after,
+span.tooltip:focus::after{
+    content:attr(aria-label);
+    display:none;
+    position:absolute;
+    top:70%;
+    left:10px;
+    padding:0.5em;
+    white-space:nowrap;
+    overflow:visible;
+    color:#fff;
+    background-color: #1e97bc;
+}
+
+span.tooltip:hover::after,
+span.tooltip:focus::after {
+    display:block
+}
+
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
+/* Skip links (works together with .screen-reader-text). */
+.skip-link {
+    background-color: #eee;
+    color: #333;
+    display: block;
+    padding: 1em;
+}
+
+.skip-link:focus {
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    left: 1em;
+    top: 1em;
+    width: auto;
+    z-index: 100000;
+}
+/* Do not show the outline on the skip link target. */
+#main[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+.link-image {
+    text-decoration: none;
+}
+.link-image:hover {
+    text-decoration: underline;
+}
+.link-image svg,
+.link-image img{
+    vertical-align: middle;
+    width: 4em;
+    height: 4em;
+    padding-right: 0.3em;
+}
+
+/* Tab interface */
+
+[role="tablist"] {
+    padding: 0;
+}
+
+[role="tablist"] li, [role="tablist"] a {
+    display: inline-block;
+}
+
+[role="tablist"] a {
+    text-decoration: none;
+    padding: 0.5rem 1em;
+}
+
+[role="tablist"] [aria-selected] {
+    border: 2px solid;
+    background: #fff;
+    border-bottom: 0;
+    position: relative;
+    top: 2px;
+}
+
+[role="tabpanel"] {
+    border: 2px solid;
+    padding: 1.5rem;
+}
+
+[role="tabpanel"] * + * {
+    margin-top: 0.75rem;
+}
+
+button.expandable + [aria-hidden] {
+    display: none;
+}
+
+button.expandable + [aria-hidden="false"] {
+    display: block;
+}
+
+.form-errors input {
+    margin-top: 2em;
+}
+
+.description {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.errors li {
+    margin: 0 2em;
+}
+.errors h3 {
+    margin: 0;
+}
+
+.error-message,
+.errors h3 {
+    color: #b00;
+    font-weight: bold;
 }
